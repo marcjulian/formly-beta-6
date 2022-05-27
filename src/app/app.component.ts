@@ -19,7 +19,17 @@ export class AppComponent {
 
 	form = new FormGroup({});
 
-	fields: FormlyFieldConfig[] = [];
+	fields: FormlyFieldConfig[] = [
+		{
+			key: 'email',
+			type: 'input',
+			props: {
+				label: 'Email address',
+				placeholder: 'Enter email',
+				required: true
+			}
+		}
+	];
 	model = {};
 
 	submit(model: any) {}
